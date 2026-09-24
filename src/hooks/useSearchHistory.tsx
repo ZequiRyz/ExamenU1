@@ -7,7 +7,7 @@ export const useSearchHistory = () => {
     const cleanTerm = term.trim();
     if (!cleanTerm) return;
 
-    // Evitar chips duplicados en el historial[cite: 1]
+    // Evitar chips duplicados en el historial
     setHistory((prevHistory) => {
       const exists = prevHistory.some(
         (item) => item.toLowerCase() === cleanTerm.toLowerCase()
